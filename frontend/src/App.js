@@ -1,40 +1,10 @@
-// import './App.css';
-// import { Navigate, Route, Routes } from 'react-router-dom';
-// import Login from './views/login';
-// import Signup from './views/signup';
-// import Home from './views/home';
-// import { useState } from 'react';
-// import AuthentiHandler from './authentiHandler';
-
-// function App() {
-//   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-//   const PrivateRoute = ({ element }) => {
-//     return isAuthenticated ? element : <Navigate to="/login" />
-//   }
-  
-//   return (
-//     <div className="App">
-//     <AuthentiHandler setIsAuthenticated={setIsAuthenticated} />
-//        <Routes>
-//         <Route path='/' element={<Navigate to='/login' />} />
-//         <Route path='/login' element={<Login/>}/>
-//         <Route path='/signup' element={<Signup/>}/>
-//         <Route path='/home' element={<PrivateRoute element={<Home />} />} />
-//        </Routes> 
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Home from './pages/Home';
+import Login from './views/Login';
+import Signup from './views/Signup';
+import Home from './views/Home';
 import { useState } from 'react';
-import RefrshHandler from './RefrshHandler';
+import checkHandler from 'authenticationHandler';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -45,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <RefrshHandler setIsAuthenticated={setIsAuthenticated} />
+      <checkHandler setIsAuthenticated={setIsAuthenticated} />
       <Routes>
         <Route path='/' element={<Navigate to="/login" />} />
         <Route path='/login' element={<Login />} />
