@@ -60,8 +60,8 @@ Fetch and return the user's details based on the token.
 
  # Task Management (CRUD Operations) using React
 
-1. Add a Task: Users can create a new task by providing a name and username and email.
-2. View Tasks: Users can view a list of all their tasks.
-3. Edit Tasks: Users can update the details of an existing task.
-4. Delete Tasks: Users can delete tasks they no longer need.
+Add a Task: Users can create a new task by providing a name and username and email.
+View Tasks: Users can view a list of all their tasks.
+Edit Tasks: Users can update the details of an existing task.
+Delete Tasks: Users can delete tasks they no longer need.
 
